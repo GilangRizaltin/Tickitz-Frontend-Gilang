@@ -1,5 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { getScheduleDetail } from "../utils/https/order";
+import { useSelector } from "react-redux";
 
 function ModalInfo(props) {
   const [copySuccess, setCopySuccess] = useState("Copy");
@@ -10,6 +12,20 @@ function ModalInfo(props) {
     e.target.focus();
     setCopySuccess("Copied!");
   };
+  const scheduleId = useSelector(state => state.order.scheduleInfo)
+  const token = useSelector(state => state.user.userInfo.token)
+  const seat = useSelector(state => state.order.chooseSeat)
+  const [dataSchedule, setDataSchedule] = useState()
+
+  useEffect(() => {
+    getScheduleDetail(scheduleId, token)
+    .then((res) => {
+      setDataSchedule(res.data.data[0])
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }, [])
 
   // const payClick = () => {
   //   const targetURL = props.url
@@ -47,7 +63,7 @@ function ModalInfo(props) {
             </div>
             <div className="flex justify-between w-full items-center">
               <p className="text-sm text-[#8692A6]">Total Payment:</p>
-              <p className="text-[18px] font-bold text-primary">$30</p>
+              <p className="text-[18px] font-bold text-primary">IDR {dataSchedule && dataSchedule.price * seat.length || 0}</p>
             </div>
             <div>
               <p className="text-[#A0A3BD] leading-8">
