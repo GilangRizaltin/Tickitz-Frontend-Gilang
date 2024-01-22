@@ -16,8 +16,8 @@ function OrderHistory() {
   const token = useSelector((state) => state.user.userInfo.token);
   const [dataOrder, setDataOrder] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams({
-    page: 1
-  })
+    page: 1,
+  });
   const noVirtualRef = useRef(null);
   const copyToClipboard = (e) => {
     noVirtualRef.current.select();

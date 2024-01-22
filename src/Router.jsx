@@ -8,7 +8,7 @@ import TicketResult from "./pages/TicketResult";
 import Profile from "./pages/Profile";
 import OrderHistory from "./pages/OrderHistory";
 import Login from "./pages/Login";
-// import Register from "./pages/Register";
+import Register from "./pages/Register";
 import Private from "./components/Private";
 import AddMovie from "./pages/AddMovie";
 import Dashboard from "./pages/Dashboard";
@@ -25,8 +25,14 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/login",
+    path: "/auth/login",
     element: <Login />,
+  },
+  {
+    path: "/auth/register",
+    element: (
+        <Register />
+    ),
   },
   {
     path: "/movie/:id",
@@ -45,7 +51,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/payment",
+    path: "/order/payment",
     element: (
       <Private>
         <Payment />
@@ -53,7 +59,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/ticketresult",
+    path: "/order/ticketresult",
     element: (
       <Private>
         <TicketResult />
@@ -69,7 +75,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/orderhistory",
+    path: "/order/orderhistory",
     element: (
       <Private>
         <OrderHistory />

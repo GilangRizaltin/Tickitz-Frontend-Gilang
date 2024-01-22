@@ -73,6 +73,8 @@ function Profile() {
   const submitHandler = (e) => {
     e.preventDefault();
 
+    //validasi
+
     const formData = new FormData();
     formData.append("user_photo", image);
     formData.append("firstname", e.target.firstname.value);

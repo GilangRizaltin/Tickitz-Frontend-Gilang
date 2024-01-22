@@ -29,7 +29,7 @@ function ListMovie() {
   ]);
 
   const [searchParams] = useSearchParams({
-    page: 1
+    page: 1,
   });
   const getMovieUrl =
     import.meta.env.VITE_BACKEND_HOST + "/movie?" + searchParams.toString();
@@ -81,12 +81,15 @@ function ListMovie() {
     },
   });
   const DeleteHandler = (id) => {
-    authAxios.delete(`/movie/${id}`).then((res) => {
-      console.log(res);
-      authAxios
-        .get("/admin/movie")
-        .then((res) => setDataMovie(res.data.data))
-        .catch((err) => console.log(err));
+    authAxios.delete(`/movie/${id}`).then(() => {
+      getAllMovie(token, getMovieUrl)
+        .then((res) => {
+          setDataMovie(res.data.data);
+          setMetaMovie(res.data.meta);
+        })
+        .catch(() => {
+          setDataMovie([]);
+        });
     });
   };
 
@@ -198,7 +201,7 @@ function ListMovie() {
           </div>
         </section>
       </main>
-      <AuthModal role={"Admin"}/>
+      <AuthModal role={"Admin"} />
       {isDropdownShown && (
         <DropdownMobile isClick={() => setIsDropdownShow(false)} />
       )}
