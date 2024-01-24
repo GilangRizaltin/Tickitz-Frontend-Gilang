@@ -55,7 +55,7 @@ VITE_BACKEND_HOST = "YOUR BACKEND URL"
 ```
 
 4. Preparing backend \
-   Don't forget to run the backend of this project: [Backend Tickitz (Golang)](https://github.com/GilangRizaltin/Tickitz-Golang)
+   Don't forget to run the backend of this project: [Backend Tickitz (Golang)](#backend)
 
 5. Start the server
 
@@ -83,32 +83,15 @@ VITE_BACKEND_HOST = "YOUR BACKEND URL"
 
 ## Screenshots
 
-| Login                                                                                                               | Home                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| ![Login Screenshot](https://res.cloudinary.com/doncmmfaa/image/upload/v1705597276/Tickitz/tickitz_login_s4w2xe.png) | ![Home Screenshot](https://res.cloudinary.com/doncmmfaa/image/upload/v1705597281/Tickitz/tickitz_home_bd8al8.png) |
-
-<!-- Login
-
-<img src="https://res.cloudinary.com/doncmmfaa/image/upload/v1705597276/Tickitz/tickitz_login_s4w2xe.png" alt="App Screenshot" width="400" height="225" />
-
-Home
-
-<img src="https://res.cloudinary.com/doncmmfaa/image/upload/v1705597281/Tickitz/tickitz_home_bd8al8.png" alt="App Screenshot" width="400" height="225" /> -->
-
-| Profile                                                                                                         | Order Movie Ticket                                                                                                             |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| ![Profile Screenshot](https://res.cloudinary.com/doncmmfaa/image/upload/v1705597272/Tickitz/profile_wumkla.png) | ![Order Movie Ticket Screenshot](https://res.cloudinary.com/doncmmfaa/image/upload/v1705597273/Tickitz/order-movie_djvbab.png) |
-
-<!-- Profile
-
-<img src="https://res.cloudinary.com/doncmmfaa/image/upload/v1705597272/Tickitz/profile_wumkla.png" alt="App Screenshot" width="400" height="225" />
-
-Order Movie Ticket
-
-<img src="https://res.cloudinary.com/doncmmfaa/image/upload/v1705597273/Tickitz/order-movie_djvbab.png" alt="App Screenshot" width="400" height="225" /> -->
+| Login                                                                                                               | Home                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| ![Login Screenshot](https://res.cloudinary.com/doncmmfaa/image/upload/v1705597276/Tickitz/tickitz_login_s4w2xe.png) | ![Home Screenshot](https://res.cloudinary.com/doncmmfaa/image/upload/v1705597281/Tickitz/tickitz_home_bd8al8.png)              |
+| Profile                                                                                                             | Order Movie Ticket                                                                                                             |
+| ![Profile Screenshot](https://res.cloudinary.com/doncmmfaa/image/upload/v1705597272/Tickitz/profile_wumkla.png)     | ![Order Movie Ticket Screenshot](https://res.cloudinary.com/doncmmfaa/image/upload/v1705597273/Tickitz/order-movie_djvbab.png) |
 
 ## Related Project
 
+<a name="backend"></a>
 [Backend (Golang)](https://github.com/GilangRizaltin/Tickitz-Golang)
 
 ## Collaborator
